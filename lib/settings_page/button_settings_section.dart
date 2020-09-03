@@ -35,31 +35,33 @@ class ButtonSettingsSection extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
-                Expanded(
-                  child: SizedBox(
-                    width: constraints.maxWidth * 0.6,
-                    height: constraints.maxHeight * 0.5,
-                    child: ReorderableListView(
-                      children: [
-                        for (var document in documents)
-                          ListTile(
-                            contentPadding: EdgeInsets.symmetric(vertical: 8),
-                            title: Text(document.title),
-                            key: Key(document.title),
-                            leading: Icon(Icons.drag_indicator),
-                            trailing: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                    icon: Icon(Icons.edit), onPressed: () {}),
-                                IconButton(
-                                    icon: Icon(Icons.delete), onPressed: () {}),
-                              ],
-                            ),
-                          )
-                      ],
-                      onReorder: (oldIndex, newIndex) {},
-                    ),
+                SizedBox(
+                  width: constraints.maxWidth * 0.6,
+                  height: constraints.maxHeight * 0.5,
+                  child: ReorderableListView(
+                    children: [
+                      for (var document in documents)
+                        ListTile(
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
+                          title: Text(document.title),
+                          key: Key(document.title),
+                          leading: Icon(Icons.drag_indicator),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.edit),
+                                onPressed: () {},
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.delete),
+                                onPressed: () {},
+                              ),
+                            ],
+                          ),
+                        )
+                    ],
+                    onReorder: (oldIndex, newIndex) {},
                   ),
                 )
               ],
