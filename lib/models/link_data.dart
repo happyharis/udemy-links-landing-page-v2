@@ -8,4 +8,11 @@ class LinkData {
     @required this.title,
     @required this.url,
   });
+
+  factory LinkData.fromMap(Map<String, dynamic> data) {
+    return LinkData(
+      title: data['title'],
+      url: data['url'],
+    );
+  }
 }
