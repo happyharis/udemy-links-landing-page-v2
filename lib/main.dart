@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     final linksCollection = FirebaseFirestore.instance.collection('links');
     final userLinkDataStream = linksCollection.snapshots().map((snapshot) {
       return snapshot.docs.map((doc) {
-        return LinkData.fromMap(doc.data());
+        return LinkData.fromDocument(doc);
       }).toList();
     });
 
