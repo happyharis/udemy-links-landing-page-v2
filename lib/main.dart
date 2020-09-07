@@ -26,8 +26,15 @@ class MyApp extends StatelessWidget {
       }).toList();
     });
 
-    return StreamProvider<List<LinkData>>(
-      create: (context) => userLinkDataStream,
+    return MultiProvider(
+      providers: [
+        Provider<CollectionReference>(
+          create: (context) => linksCollection,
+        ),
+        StreamProvider<List<LinkData>>(
+          create: (context) => userLinkDataStream,
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
