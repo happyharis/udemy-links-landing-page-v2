@@ -76,12 +76,9 @@ class EditButton extends StatelessWidget {
                         _linksCollection.doc(document.id).update(
                               newLinkData.toMap(),
                             );
-
-                        print('updates');
                       }
 
                       Navigator.of(context).pop();
-                      _formKey.currentState.reset();
                     }
                   },
                   child: Text('Edit'),
