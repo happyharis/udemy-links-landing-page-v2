@@ -1,8 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:links_landing_page/models/link_data.dart';
 import 'package:links_landing_page/settings_page/add_button.dart';
 import 'package:links_landing_page/settings_page/delete_button.dart';
+import 'package:links_landing_page/settings_page/edit_button.dart';
 import 'package:provider/provider.dart';
 
 class ButtonSettingsSection extends StatelessWidget {
@@ -47,10 +47,7 @@ class ButtonSettingsSection extends StatelessWidget {
                           trailing: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              IconButton(
-                                icon: Icon(Icons.edit),
-                                onPressed: () {},
-                              ),
+                              EditButton(document: document),
                               DeleteButton(document: document),
                             ],
                           ),
