@@ -30,6 +30,7 @@ dependencies:
   url_launcher: ^5.5.2
   cloud_firestore: ^0.14.0+2
   provider: ^4.3.2+1
+  firebase_auth: ^0.18.0+1
 
 dev_dependencies:
   flutter_test:
@@ -70,3 +71,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
