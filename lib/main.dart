@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final linksCollection = FirebaseFirestore.instance.collection('links');
-    final userLinkDataStream = linksCollection.snapshots().map((snapshot) {
+    final userLinkDataStream =
+        linksCollection.orderBy('position').snapshots().map((snapshot) {
       return snapshot.docs.map((doc) {
         return LinkData.fromDocument(doc);
       }).toList();
