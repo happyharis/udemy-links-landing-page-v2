@@ -81,7 +81,6 @@ class EditButton extends StatelessWidget {
                       }
 
                       Navigator.of(context).pop();
-                      _formKey.currentState.reset();
                     }
                   },
                   child: Text('Edit'),
