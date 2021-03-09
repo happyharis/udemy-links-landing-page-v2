@@ -43,8 +43,7 @@ class ButtonSettingsSection extends StatelessWidget {
                           contentPadding: EdgeInsets.symmetric(vertical: 8),
                           title: Text(document.title),
                           key: Key(document.title),
-                          leading: Icon(Icons.drag_indicator),
-                          trailing: Row(
+                          leading: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               EditButton(document: document),
